@@ -34,6 +34,9 @@ public class Admin {
 	@Transient
 	@OneToOne(mappedBy = "admin", cascade = CascadeType.REMOVE)
 	private BusinessDetails businessDetails;
+	@Transient
+	@OneToOne(mappedBy = "admin", cascade = CascadeType.REMOVE)
+	private Team teamMember;
 
 	public int getId() {
 		return id;
@@ -123,10 +126,18 @@ public class Admin {
 		this.businessDetails = businessDetails;
 	}
 
+	public Team getTeamMember() {
+		return teamMember;
+	}
+
+	public void setTeamMember(Team teamMember) {
+		this.teamMember = teamMember;
+	}
+
 	@Override
 	public String toString() {
 		return "Admin{" +
-				"adminID=" + id +
+				"id=" + id +
 				", adminName='" + adminName + '\'' +
 				", adminEmail='" + adminEmail + '\'' +
 				", adminPassword='" + adminPassword + '\'' +
@@ -136,6 +147,8 @@ public class Admin {
 				", registrationType='" + registrationType + '\'' +
 				", timeStamp='" + timeStamp + '\'' +
 				", lastUpdateTime='" + lastUpdateTime + '\'' +
+				", businessDetails=" + businessDetails +
+				", teamMember=" + teamMember +
 				'}';
 	}
 }
