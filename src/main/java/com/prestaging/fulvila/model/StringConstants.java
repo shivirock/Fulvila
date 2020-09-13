@@ -64,4 +64,23 @@ public class StringConstants {
     //Common Error Response
     public static final String UNKNOWN_ERROR = "Unknown Error" ;
     public static final int UNKNOWN_ERROR_CODE = -17 ;
+
+    //Team Response
+    //Success Response
+    public static final String SUCCESSFULLY_CREATED_TEAM_MEMBER = "Team Member Registered Successfully";
+    public static final String SUCCESSFULLY_UPDATED_TEAM_MEMBER = "Team Member is successfully updated";
+    public static final int SUCCESSFULLY_UPDATED_TEAM_MEMBER_CODE = 8;
+    public static final String SUCCESSFULLY_DELETED_TEAM_MEMBER = "Team Member is successfully deleted";
+    public static final int SUCCESSFULLY_DELETED_TEAM_MEMBER_CODE = 9;
+    //Error Response
+    public static final String TEAM_MEMBER_CREATION_FAILED = "Team Member Registeration is failed";
+    public static final int TEAM_MEMBER_CREATION_FAILED_CODE = -18;
+    public static final String TEAM_MEMBER_CREATION_FAILED_DUE_TO_CONSTRAINT = "Team Member Registeration is failed due to Team member already exist or wrong admin ID is passed";
+    public static final int TEAM_MEMBER_CREATION_FAILED_DUE_TO_CONSTRAINT_CODE = -19;
+    public static final String UNABLE_TO_FIND_TEAM_MEMBER = "Team Member does not Exist";
+    public static final int UNABLE_TO_FIND_TEAM_MEMBER_CODE = -20;
+    public static final String UNABLE_TO_UPDATED_TEAM_MEMBER = "Team Member updation is failed";
+    public static final int UNABLE_TO_UPDATED_TEAM_MEMBER_CODE = -21;
+    public static final int TEAM_ID_DOES_NOT_EXIST_CODE = -22;
+    public static final String TEAM_ID_DOES_NOT_EXIST = "Given Team ID does not exist in our database or already been deleted";
 }
