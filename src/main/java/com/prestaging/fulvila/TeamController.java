@@ -1,8 +1,9 @@
-package com.prestaging.fulvila.util;
+package com.prestaging.fulvila;
 
 import com.prestaging.fulvila.model.*;
 import com.prestaging.fulvila.repository.AdminRepository;
 import com.prestaging.fulvila.repository.TeamRepository;
+import com.prestaging.fulvila.util.Util;
 import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
