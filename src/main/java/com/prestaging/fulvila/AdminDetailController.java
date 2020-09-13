@@ -4,6 +4,7 @@ import com.prestaging.fulvila.model.*;
 import com.prestaging.fulvila.repository.AdminRepository;
 import com.prestaging.fulvila.repository.BusinessDetailRepository;
 import com.prestaging.fulvila.repository.PasswordResetTokenRepository;
+import com.prestaging.fulvila.repository.TeamRepository;
 import com.prestaging.fulvila.util.Mail;
 import com.prestaging.fulvila.util.SendMail;
 import com.prestaging.fulvila.util.Util;
@@ -32,6 +33,9 @@ public class AdminDetailController {
 
     @Autowired
     BusinessDetailRepository mBusinessDetailRepository;
+
+    @Autowired
+    TeamRepository mTeamRepository;
 
     @Autowired
     private PasswordResetTokenRepository passwordResetTokenRepository;
@@ -170,6 +174,8 @@ public class AdminDetailController {
             LOGGER.info("Unreferencing Business Details for admin ID: " + adminID);
             int result = mBusinessDetailRepository.updateReference(adminID);
             LOGGER.info("Before Deleting Admin " + email + " unreferencing " + result + " records from Business Details");
+            result = mTeamRepository.deleteByAdminId(adminID);
+            LOGGER.info("Before Deleting Admin " + email + " deleting " + result + " records from Team Details");
         } catch (Exception e) {
             LOGGER.error("While Deleting Admin " + email + " " + e.getMessage());
         }
