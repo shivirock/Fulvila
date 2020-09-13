@@ -154,7 +154,14 @@ public class BusinessDetailController {
 
         for (int id:ids) {
             try {
-                mBusinessDetailRepository.deleteById(id);
+                int result = mBusinessDetailRepository.deleteByAdminIDAndID(id, admins.get(0).getId());
+                if(result == 0) {
+                    responseModel.setObject(null);
+                    responseModel.setResponseMessage(StringConstants.BUSINESS_ID_DOES_NOT_EXIST+" for admin: "+mLoginEntity.getEmail());
+                    responseModel.setResponseCode(StringConstants.BUSINESS_ID_DOES_NOT_EXIST_CODE);
+                    LOGGER.error("Requested By: "+request.getRemoteAddr()+" for deletion operation of business with ID "+id+" failed due to "+ responseModel.getResponseMessage());
+                    return new ResponseEntity<>(responseModel, HttpStatus.NOT_ACCEPTABLE);
+                }
             } catch (EmptyResultDataAccessException e) {
                 e.printStackTrace();
                 responseModel.setObject(null);
