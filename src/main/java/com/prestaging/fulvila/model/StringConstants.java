@@ -83,4 +83,23 @@ public class StringConstants {
     public static final int UNABLE_TO_UPDATED_TEAM_MEMBER_CODE = -21;
     public static final int TEAM_ID_DOES_NOT_EXIST_CODE = -22;
     public static final String TEAM_ID_DOES_NOT_EXIST = "Given Team ID does not exist in our database or already been deleted";
+
+    //Product Detail
+    //Success Message
+    public static final String SUCCESS_PROUDCT_INSERTION ="Successfully Inserted the product details";
+    public static final int SUCCESS_PROUDCT_INSERTION_CODE = 10;
+    public static final String SUCCESS_PROUDCT_IMAGE_INSERTION ="Successfully Inserted the product details";
+    public static final int SUCCESS_PROUDCT_IMAGE_INSERTION_CODE = 11;
+    public static final String PROUDCT_FOUND ="Products found";
+    //Error Message
+    public static final String MISSING_PRODUCT_MANDATORY_FIELD ="Mandatory field from product details are missing";
+    public static final int MISSING_PRODUCT_MANDATORY_FIELD_CODE = -23;
+    public static final String PRODUCT_SUBMISSION_UNKNOWN_EXCEPTION ="Unknown exception found while inserting product details";
+    public static final int PRODUCT_SUBMISSION_UNKNOWN_EXCEPTION_CODE = -24;
+    public static final String MISSING_PRODUCT_IMAGE_MANDATORY_FIELD ="Mandatory field from product images are missing";
+    public static final int MISSING_PRODUCT_IMAGE_MANDATORY_FIELD_CODE = -25;
+    public static final String PRODUCT_IMAGE_SUBMISSION_UNKNOWN_EXCEPTION ="Unknown exception found while inserting product images";
+    public static final int PRODUCT_IMAGE_SUBMISSION_UNKNOWN_EXCEPTION_CODE = -26;
+    public static final String NO_PRODUCT_FOUND ="No Product Found";
+    public static final int NO_PRODUCT_FOUND_CODE = -27;
 }
