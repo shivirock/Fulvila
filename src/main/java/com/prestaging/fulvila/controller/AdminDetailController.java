@@ -1,4 +1,4 @@
-package com.prestaging.fulvila;
+package com.prestaging.fulvila.controller;
 
 import com.prestaging.fulvila.model.*;
 import com.prestaging.fulvila.repository.AdminRepository;
