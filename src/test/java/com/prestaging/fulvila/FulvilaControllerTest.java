@@ -1,9 +1,8 @@
 package com.prestaging.fulvila;
 
+import com.prestaging.fulvila.controller.FulvilaController;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.ResponseEntity;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class FulvilaControllerTest {
 
