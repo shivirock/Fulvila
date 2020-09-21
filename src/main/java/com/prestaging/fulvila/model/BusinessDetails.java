@@ -41,6 +41,9 @@ public class BusinessDetails {
     private String timeStamp;
     @Column(name = "last_update_time", nullable = false)
     private String lastUpdateTime;
+    @Transient
+    @OneToOne(mappedBy = "businessDetails", cascade = CascadeType.REMOVE)
+    private ProductDetail productDetail;
 
     public int getId() {
         return id;
